@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Question Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select, input[type="text"], input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Question Generator</h1>
+    <label for="questionType">Question Type:</label>
+    <select id="questionType">
+        <option value="Aptitude">Aptitude</option>
+        <option value="Theory">Theory</option>
+        <option value="Programming">Programming</option>
+    </select>
+
+    <label for="subjectName">Subject Name:</label>
+    <input type="text" id="subjectName" placeholder="Enter Subject Name">
+
+    <label for="subjectCode">Subject Code (Optional):</label>
+    <input type="text" id="subjectCode" placeholder="Enter Subject Code (Optional)">
+
+    <label for="numQuestions">Number of Questions:</label>
+    <input type="number" id="numQuestions" placeholder="Enter Number of Questions" min="1" max="10">
+
+    <button onclick="generateQuestions()">Generate Questions</button>
+
+    <div id="output" class="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
